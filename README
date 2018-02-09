@@ -1,0 +1,16 @@
+int_cast
+--------
+
+C and C++ forces you to be very careful when dealing with mixed typed integers
+to ensure the correctness of computations and comparisons.
+
+This cast allows you to safely cast a value from one integer type to another.
+It handles all the error checking that one needs perform during the conversion
+to ensure no information is lost. If the type cast cannot be performed without
+losing information then an error is thrown.
+
+The best way to deal with mismatched integer types in your code is to simply
+limit the your integers to a single type like "int". This is works well with
+code you write, but there are many APIs and language constructs that insist on
+using "size_t". This cast allows you to work with these external APIs and
+still maintain a high level of integer consistency in your code.

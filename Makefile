@@ -1,4 +1,4 @@
-CXXFLAGS ?= -std=c++11
+CXXFLAGS ?= -std=c++11 -Wall -Werror
 CXX := g++
 CC := g++
 

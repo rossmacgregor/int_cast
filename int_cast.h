@@ -80,7 +80,7 @@ inline D int_cast(S value)
         "int_cast: Attempt to cast a negative value to an unsigned integral.");
 
     int_cast_assert_with_message(
-        value <= numeric_limits<D>::max(),
+        static_cast<typename make_unsigned<S>::type>(value) <= numeric_limits<D>::max(),
         "int_cast: Value too large for cast operation.");
 
     return static_cast<D>(value);
